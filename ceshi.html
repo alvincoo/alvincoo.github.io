@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <style>
+        ul{
+            width: 70%;
+            margin: 0 auto;
+            display: flex;
+
+
+        }
+        ul li{
+            flex-grow: 1;
+            flex-basis: 20%;
+            border: 1px solid #222;
+            margin: 10px;
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+   <ul>
+       <li>aaaaa</li>
+       <li>aaaaa</li>
+       <li>aaaaa</li>
+       <li>aaaaa</li>
+       <li>aaaaa</li>
+       <li>aaaaa</li>
+   </ul>
+</body>
+<script>
+    function unique(arr) {
+    var obj={};
+    return arr.filter(function(item,index,arr){
+        return obj.hasOwnProperty(typeof item + item)?false:(obj[typeof item + item]=true);
+    })
+}
+    var arr = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, null,null, NaN, NaN,'NaN', 0, 0, 'a', 'a',{},{}];
+        console.log(unique(arr))
+</script>
+</html>
+
